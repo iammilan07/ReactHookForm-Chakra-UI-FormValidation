@@ -6,7 +6,7 @@ import Buttoncom from "../atom/button/button";
 const Second = () => {
   return (
     <Box
-      p="20px"
+      //   p="20px"
       border="1px solid #B6BEC9"
       borderRadius="5px"
       bg="#FFFFFF 0% 0% no-repeat padding-box"
@@ -14,13 +14,18 @@ const Second = () => {
       ml="50px"
       mr="50px"
     >
-      <Textfile
-        color="#1e90ff"
-        fontSize="lg"
-        fontWeight="600"
-        name="Introduction"
-      />
+      <Box>
+        <Textfile
+          padding="20px"
+          bg="#e0e0e0"
+          color="#1e90ff"
+          fontSize="lg"
+          fontWeight="600"
+          name="Introduction"
+        />
+      </Box>
       <Box
+        m="20px"
         display="flex"
         width="300px"
         justifyContent="space-between"
@@ -53,6 +58,7 @@ const Second = () => {
         />
       </Box>
       <Box
+        m="20px"
         marginTop="20px"
         display="flex"
         width="700px"
@@ -77,6 +83,7 @@ const Second = () => {
       </Box>
 
       <Box
+        m="20px"
         marginTop="20px"
         display="flex"
         width="700px"
@@ -92,6 +99,7 @@ const Second = () => {
       </Box>
 
       <Box
+        m="20px"
         marginTop="20px"
         display="flex"
         width="700px"
