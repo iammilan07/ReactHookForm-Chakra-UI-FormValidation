@@ -7,8 +7,13 @@ export interface FistheadingProps {}
 export function Fistheading(props: FistheadingProps) {
   return (
     <>
-      <Box p="20px">
-        <Textfile fontSize="lg" fontWeight="500" name="Add Employee" />
+      <Box ml="50px" mr="400px">
+        <Textfile
+          padding="20px"
+          fontSize="lg"
+          fontWeight="500"
+          name="Add Employee"
+        />
       </Box>
     </>
   );

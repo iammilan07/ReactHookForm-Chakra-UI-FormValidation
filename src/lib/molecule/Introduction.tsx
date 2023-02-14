@@ -3,21 +3,19 @@ import { Box, Input } from "@chakra-ui/react";
 import Textfile from "../atom/text/text";
 import Buttoncom from "../atom/button/button";
 
-const Second = () => {
+const Introduction = () => {
   return (
     <Box
-      //   p="20px"
       border="1px solid #B6BEC9"
       borderRadius="5px"
       bg="#FFFFFF 0% 0% no-repeat padding-box"
-      //   pt="20px"
       ml="50px"
-      mr="50px"
+      mr="400px"
     >
       <Box>
         <Textfile
           padding="20px"
-          bg="#e0e0e0"
+          bg="#e8e8e8"
           color="#1e90ff"
           fontSize="lg"
           fontWeight="600"
@@ -113,4 +111,4 @@ const Second = () => {
   );
 };
 
-export default Second;
+export default Introduction;
