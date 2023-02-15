@@ -1,15 +1,9 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
-import { useForm } from "react-hook-form";
-const AdditionalInformation = (props: any) => {
-  const { register } = props;
-  const {
-    // register,
+import TextFile from "../atom/text/text";
 
-    formState: { errors },
-  } = useForm();
-  //function
+const AdditionalInformation = (props: any) => {
+  const { register, errors } = props;
 
   return (
     <Box>
@@ -22,7 +16,7 @@ const AdditionalInformation = (props: any) => {
         width="60%"
       >
         <Box>
-          <Textfile
+          <TextFile
             padding="20px"
             bg="#e8e8e8"
             color="#1e90ff"
@@ -39,10 +33,11 @@ const AdditionalInformation = (props: any) => {
           justifyContent="space-between"
         >
           <Box width="300px">
-            <Textfile fontSize="md" name="Date of Birth" />
+            <TextFile fontSize="md" name="Date of Birth" />
             <input
               type="date"
               style={{
+                width: "300px",
                 padding: "10px",
                 color: "black",
                 height: "40px",
@@ -51,11 +46,11 @@ const AdditionalInformation = (props: any) => {
               }}
               {...register("dateOfBirth", { required: true, maxLength: 20 })}
             />
+            {errors?.dateOfBirth?.type === "required" && (
+              <p style={{ color: "red" }}>This field is required!! ⚠</p>
+            )}
           </Box>
         </Box>
-        {errors?.dateOfBirth?.type === "required" && (
-          <p style={{ color: "red" }}>This field is required!! ⚠</p>
-        )}
 
         <Box
           m="20px"
@@ -65,10 +60,11 @@ const AdditionalInformation = (props: any) => {
           width="620px"
         >
           <Box width="300px">
-            <Textfile fontSize="md" name="Father's Name" />
+            <TextFile fontSize="md" name="Father's Name" />
             <input
               placeholder="Add your Father's Name"
               style={{
+                width: "300px",
                 padding: "10px",
                 color: "black",
                 height: "40px",
@@ -83,10 +79,11 @@ const AdditionalInformation = (props: any) => {
           </Box>
 
           <Box width="300px">
-            <Textfile fontSize="md" name="Mother's Name" />
+            <TextFile fontSize="md" name="Mother's Name" />
             <input
               placeholder="Add your First Name"
               style={{
+                width: "300px",
                 padding: "10px",
                 color: "black",
                 height: "40px",
@@ -95,15 +92,15 @@ const AdditionalInformation = (props: any) => {
               }}
               {...register("mothername", { required: true, maxLength: 20 })}
             />
+            {errors?.mothername?.type === "required" && (
+              <p style={{ color: "red" }}>This field is required!! ⚠</p>
+            )}
           </Box>
-          {errors?.mothername?.type === "required" && (
-            <p style={{ color: "red" }}>This field is required!! ⚠</p>
-          )}
         </Box>
         <Box width="300px" m="20px" marginTop="20px">
           <Box display="flex" justifyContent="space-between">
-            <Textfile fontSize="md" name="Martial Status" />
-            <Textfile color="grey" fontSize="sm" name="optional" />
+            <TextFile fontSize="md" name="Martial Status" />
+            <TextFile color="grey" fontSize="sm" name="optional" />
           </Box>
           <select
             placeholder="Select Status"

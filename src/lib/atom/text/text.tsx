@@ -1,28 +1,11 @@
+import { Text, TextProps } from "@chakra-ui/react";
 import React from "react";
-import { Text } from "@chakra-ui/react";
 
-export function Textfile(props: any) {
-  return (
-    <Text
-      textAlign={props.textAlign}
-      opacity={props.opacity}
-      border={props.border}
-      borderColor={props.borderColor}
-      borderRadius={props.borderRadius}
-      as={props.as}
-      paddingLeft={props.pl}
-      color={props.color}
-      paddingBottom={props.paddingBottom}
-      fontSize={props.fontSize}
-      paddingRight={props.paddingRight}
-      fontWeight={props.fontWeight}
-      padding={props.padding}
-      bg={props.bg}
-      paddingTop={props.pT}
-    >
-      {props.name}
-    </Text>
-  );
+interface ITextFile extends TextProps {
+  name: any;
 }
-
-export default Textfile;
+const TextFile = (props: ITextFile) => {
+  const { name, ...rest } = props;
+  return <Text {...rest}>{name}</Text>;
+};
+export default TextFile;

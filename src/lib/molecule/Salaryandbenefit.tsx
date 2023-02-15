@@ -1,15 +1,10 @@
 import React from "react";
 import { Box, HStack } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
+import TextFile from "../atom/text/text";
 import Buttoncom from "../atom/button/button";
-import { useForm } from "react-hook-form";
-const SalaryAndBenefit = (props: any) => {
-  const { register } = props;
-  const {
-    // register,
 
-    formState: { errors },
-  } = useForm();
+const SalaryAndBenefit = (props: any) => {
+  const { register, errors } = props;
   return (
     <Box>
       <Box
@@ -21,7 +16,7 @@ const SalaryAndBenefit = (props: any) => {
         width="60%"
       >
         <Box>
-          <Textfile
+          <TextFile
             padding="20px"
             bg="#e8e8e8"
             color="#1e90ff"
@@ -34,8 +29,8 @@ const SalaryAndBenefit = (props: any) => {
         <HStack>
           <Box width="300px" m="20px" marginTop="20px">
             <Box display="flex" justifyContent="space-between">
-              <Textfile fontSize="md" name="Salary template" />
-              <Textfile color="grey" fontSize="sm" name="optional" />
+              <TextFile fontSize="md" name="Salary template" />
+              <TextFile color="grey" fontSize="sm" name="optional" />
             </Box>
             <select
               placeholder="select option"
@@ -57,8 +52,8 @@ const SalaryAndBenefit = (props: any) => {
             )}
           </Box>
           <Box width="300px" display="flex" justifyContent="space-between">
-            <Textfile name="Gross pay" />
-            <Textfile name="Rs. 50,000.00" />
+            <TextFile name="Gross pay" />
+            <TextFile name="Rs. 50,000.00" />
             <Buttoncom name="Review" color="blue" />
           </Box>
         </HStack>

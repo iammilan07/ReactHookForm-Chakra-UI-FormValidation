@@ -1,17 +1,10 @@
 import React from "react";
 import { Box, FormControl } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
+import TextFile from "../atom/text/text";
 import Buttoncom from "../atom/button/button";
-import { useForm } from "react-hook-form";
 
 const Introduction = (props: any) => {
-  const { register } = props;
-  //reacthookfrom
-  const {
-    // register,
-
-    formState: { errors },
-  } = useForm();
+  const { register, errors } = props;
 
   return (
     <Box>
@@ -24,7 +17,7 @@ const Introduction = (props: any) => {
           width="60%"
         >
           <Box>
-            <Textfile
+            <TextFile
               padding="20px"
               bg="#e8e8e8"
               color="#1e90ff"
@@ -74,7 +67,7 @@ const Introduction = (props: any) => {
             justifyContent="space-between"
           >
             <Box>
-              <Textfile fontSize="md" name="First Name" />
+              <TextFile fontSize="md" name="First Name" />
 
               <input
                 type="text"
@@ -86,17 +79,17 @@ const Introduction = (props: any) => {
                   borderRadius: "7px",
                   border: "1px solid black",
                 }}
-                {...register("firstname", { required: true, maxLength: 20 })}
+                {...register("firstName", { required: true, maxLength: 20 })}
               />
-              {errors?.firstname?.type === "required" && (
+              {errors?.firstName?.type === "required" && (
                 <p style={{ color: "red" }}>This field is required!! ⚠</p>
               )}
             </Box>
 
             <Box>
               <Box display="flex" justifyContent="space-between">
-                <Textfile fontSize="md" name="Middle Name" />
-                <Textfile color="grey" fontSize="sm" name="optional" />
+                <TextFile fontSize="md" name="Middle Name" />
+                <TextFile color="grey" fontSize="sm" name="optional" />
               </Box>
               <input
                 placeholder="Add your Middle Name"
@@ -112,22 +105,22 @@ const Introduction = (props: any) => {
             </Box>
 
             <Box>
-              <Textfile fontSize="md" name="Last Name" />
+              <TextFile fontSize="md" name="Last Name" />
               <input
                 placeholder="Add your Last Name"
                 style={{
                   padding: "10px",
-                  color: "white",
+                  color: "black",
                   height: "40px",
                   borderRadius: "7px",
                   border: "1px solid black",
                 }}
-                {...register("lastname", { required: true, maxLength: 20 })}
+                {...register("lastName", { required: true, maxLength: 20 })}
               />
+              {errors?.lastName?.type === "required" && (
+                <p style={{ color: "red" }}>This field is required!! ⚠</p>
+              )}
             </Box>
-            {errors?.lastname?.type === "required" && (
-              <p style={{ color: "red" }}>This field is required!! ⚠</p>
-            )}
           </Box>
 
           <Box
@@ -139,8 +132,8 @@ const Introduction = (props: any) => {
           >
             <Box width="470px">
               <Box display="flex" justifyContent="space-between">
-                <Textfile fontSize="lg" name="नाम (नेपालीमा)" />
-                <Textfile color="grey" fontSize="sm" name="optional" />
+                <TextFile fontSize="lg" name="नाम (नेपालीमा)" />
+                <TextFile color="grey" fontSize="sm" name="optional" />
               </Box>
               <input
                 placeholder="आफनो नाम नेपालीमा लेख्नुहोस"
@@ -164,7 +157,12 @@ const Introduction = (props: any) => {
             width="700px"
             justifyContent="space-between"
           >
-            <Box width="300px" height="100px">
+            <Box
+              border="1px solid black"
+              borderRadius="10px"
+              width="300px"
+              height="100px"
+            >
               <input
                 type="file"
                 {...register("file", { required: false, maxLength: 20 })}

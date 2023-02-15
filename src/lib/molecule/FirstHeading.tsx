@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
+import TextFile from "../atom/text/text";
 
 export function FirstHeading() {
   return (
     <>
       <Box ml="50px">
-        <Textfile
+        <TextFile
           padding="20px"
           fontSize="lg"
           fontWeight="500"

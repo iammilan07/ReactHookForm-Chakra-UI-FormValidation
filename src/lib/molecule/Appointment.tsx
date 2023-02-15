@@ -1,14 +1,9 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
-import { useForm } from "react-hook-form";
-const Appointment = (props: any) => {
-  const { register } = props;
-  const {
-    // register,
+import TextFile from "../atom/text/text";
 
-    formState: { errors },
-  } = useForm();
+const Appointment = (props: any) => {
+  const { register, errors } = props;
   return (
     <Box>
       <Box
@@ -20,7 +15,7 @@ const Appointment = (props: any) => {
         width="60%"
       >
         <Box>
-          <Textfile
+          <TextFile
             padding="20px"
             bg="#e8e8e8"
             color="#1e90ff"
@@ -31,8 +26,8 @@ const Appointment = (props: any) => {
         </Box>
         <Box width="300px" m="20px" marginTop="20px">
           <Box display="flex" justifyContent="space-between">
-            <Textfile fontSize="md" name="Hiring Method" />
-            <Textfile color="grey" fontSize="sm" name="optional" />
+            <TextFile fontSize="md" name="Hiring Method" />
+            <TextFile color="grey" fontSize="sm" name="optional" />
           </Box>
           <select
             placeholder="select option"
@@ -57,24 +52,56 @@ const Appointment = (props: any) => {
           m="20px"
           marginTop="20px"
           display="flex"
-          width="700px"
+          // width="100px"
           justifyContent="space-between"
         >
           <Box>
-            <Textfile fontSize="md" name="AppointmentDate" />
+            <TextFile fontSize="md" name="AppointmentDate" />
 
-            <input type="date" {...register("AppointmentDate")} />
+            <input
+              type="date"
+              style={{
+                width: "300px",
+                padding: "10px",
+                color: "black",
+                height: "40px",
+                borderRadius: "7px",
+                border: "1px solid black",
+              }}
+              {...register("AppointmentDate")}
+            />
           </Box>
           <Box>
             <Box display="flex" justifyContent="space-between">
-              <Textfile fontSize="md" name="Appointment Letter Number" />
-              <Textfile color="grey" fontSize="sm" name="optional" />
+              <TextFile fontSize="md" name="Appointment Letter Number" />
+              <TextFile color="grey" fontSize="sm" name="optional" />
             </Box>
-            <input {...register("AppointmentLetterNumber")} />
+            <input
+              style={{
+                width: "300px",
+                padding: "10px",
+                color: "black",
+                height: "40px",
+                borderRadius: "7px",
+                border: "1px solid black",
+              }}
+              {...register("AppointmentLetterNumber")}
+            />
           </Box>
           <Box>
-            <Textfile fontSize="md" name="Appointment Letter Date" />
-            <input type="date" {...register("AppointmentLetterDate")} />
+            <TextFile fontSize="md" name="Appointment Letter Date" />
+            <input
+              type="date"
+              style={{
+                width: "300px",
+                padding: "10px",
+                color: "black",
+                height: "40px",
+                borderRadius: "7px",
+                border: "1px solid black",
+              }}
+              {...register("AppointmentLetterDate")}
+            />
           </Box>
         </Box>
       </Box>

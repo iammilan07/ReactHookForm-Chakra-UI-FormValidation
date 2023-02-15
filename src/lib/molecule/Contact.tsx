@@ -1,13 +1,9 @@
 import React from "react";
 import { Box, HStack, Checkbox } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
-import { useForm } from "react-hook-form";
+import TextFile from "../atom/text/text";
+
 const Contact = (props: any) => {
-  const { register } = props;
-  const {
-    // register,
-    formState: { errors },
-  } = useForm();
+  const { register, errors } = props;
   return (
     <Box
       mt="10px"
@@ -18,7 +14,7 @@ const Contact = (props: any) => {
       width="60%"
     >
       <Box>
-        <Textfile
+        <TextFile
           padding="20px"
           bg="#e8e8e8"
           color="#1e90ff"
@@ -29,7 +25,7 @@ const Contact = (props: any) => {
       </Box>
       <HStack>
         <Box width="300px" m="20px" marginTop="20px">
-          <Textfile fontSize="md" name="Mobile Number" />
+          <TextFile fontSize="md" name="Mobile Number" />
 
           <input
             type="text"
@@ -50,10 +46,10 @@ const Contact = (props: any) => {
         </Box>
 
         <Box width="300px" m="20px" marginTop="20px">
-          <Textfile fontSize="md" name="Personal e-mail" />
+          <TextFile fontSize="md" name="Personal e-mail" />
 
           <input
-            type="text"
+            type="email"
             placeholder="Add your E-Mail Id"
             style={{
               width: "300px",
@@ -72,11 +68,11 @@ const Contact = (props: any) => {
 
         <Box width="300px" m="20px" marginTop="20px">
           <Box display="flex" justifyContent="space-between">
-            <Textfile fontSize="md" name="Office e-mail" />
-            <Textfile color="grey" fontSize="sm" name="optional" />
+            <TextFile fontSize="md" name="Office e-mail" />
+            <TextFile color="grey" fontSize="sm" name="optional" />
           </Box>
           <input
-            type="text"
+            type="email"
             placeholder="Add your Office E-Mail Id"
             style={{
               padding: "10px",

@@ -1,15 +1,10 @@
 import React from "react";
 import { Box, HStack } from "@chakra-ui/react";
-import Textfile from "../atom/text/text";
+import TextFile from "../atom/text/text";
 import Buttoncom from "../atom/button/button";
-import { useForm } from "react-hook-form";
-const Leaves = (props: any) => {
-  const { register } = props;
-  const {
-    // register,
 
-    formState: { errors },
-  } = useForm();
+const Leaves = (props: any) => {
+  const { register, errors } = props;
   return (
     <Box
       mt="10px"
@@ -20,7 +15,7 @@ const Leaves = (props: any) => {
       width="60%"
     >
       <Box>
-        <Textfile
+        <TextFile
           padding="20px"
           bg="#e8e8e8"
           color="#1e90ff"
@@ -33,8 +28,8 @@ const Leaves = (props: any) => {
       <HStack>
         <Box width="300px" m="20px" marginTop="20px">
           <Box display="flex" justifyContent="space-between">
-            <Textfile fontSize="md" name="Leaves template" />
-            <Textfile color="grey" fontSize="sm" name="optional" />
+            <TextFile fontSize="md" name="Leaves template" />
+            <TextFile color="grey" fontSize="sm" name="optional" />
           </Box>
           <select
             placeholder="select option"

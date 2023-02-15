@@ -1,10 +1,10 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import Toppart from "../../organisms/toppart/toppart";
+import TopPart from "../../organisms/toppart/toppart";
 const billing = () => {
   return (
     <Box>
-      <Toppart />
+      <TopPart />
     </Box>
   );
 };
