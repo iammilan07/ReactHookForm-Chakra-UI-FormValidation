@@ -1,7 +1,5 @@
-import styles from './text.module.scss';
-import React from 'react';
+import React from "react";
 import { Text } from "@chakra-ui/react";
-
 
 export function Textfile(props: any) {
   return (
@@ -21,7 +19,6 @@ export function Textfile(props: any) {
       padding={props.padding}
       bg={props.bg}
       paddingTop={props.pT}
-
     >
       {props.name}
     </Text>

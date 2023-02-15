@@ -4,6 +4,7 @@ import React from "react";
 const Buttoncom = (props: any) => {
   return (
     <Button
+      type={props.type}
       border={props.border}
       borderColor={props.borderColor}
       p={props.p}

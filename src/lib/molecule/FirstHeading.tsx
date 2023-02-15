@@ -1,13 +1,11 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import Textfile from "../atom/text/text";
-/* eslint-disable-next-line */
-export interface FistheadingProps {}
 
-export function Fistheading(props: FistheadingProps) {
+export function FirstHeading() {
   return (
     <>
-      <Box ml="50px" mr="400px">
+      <Box ml="50px">
         <Textfile
           padding="20px"
           fontSize="lg"
@@ -19,4 +17,4 @@ export function Fistheading(props: FistheadingProps) {
   );
 }
 
-export default Fistheading;
+export default FirstHeading;
