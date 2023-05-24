@@ -67,7 +67,7 @@ const Introduction = (props: any) => {
             justifyContent="space-between"
           >
             <Box>
-              <TextFile fontSize="md" name="First Name" />
+              <TextFile fontSize="md" name="First-Name" />
 
               <input
                 type="text"
@@ -92,7 +92,7 @@ const Introduction = (props: any) => {
                 <TextFile color="grey" fontSize="sm" name="optional" />
               </Box>
               <input
-                placeholder="Add your Middle Name"
+                placeholder="Add your Middle-Name"
                 style={{
                   padding: "10px",
                   color: "black",
@@ -105,9 +105,9 @@ const Introduction = (props: any) => {
             </Box>
 
             <Box>
-              <TextFile fontSize="md" name="Last Name" />
+              <TextFile fontSize="md" name="Last-Name" />
               <input
-                placeholder="Add your Last Name"
+                placeholder="Add your Last-Name"
                 style={{
                   padding: "10px",
                   color: "black",

@@ -1,17 +1,17 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
-import AdditionalInformation from "../../molecule/additionalInformation";
-import Appointment from "../../molecule/appointment";
-import Contact from "../../molecule/contact";
-import FirstHeading from "../../molecule/firstHeading";
-import { Footer } from "../../molecule/footer";
-import Introduction from "../../molecule/introduction";
-import JobAndPlacement from "../../molecule/jobAndPlacement";
-import Leaves from "../../molecule/leaves";
-import SalaryAndBenefit from "../../molecule/salaryAndBenefit";
+import AdditionalInformation from "../../molecule/Additionalinformation";
+import Appointment from "../../molecule/Appointment";
+import Contact from "../../molecule/Contact";
+import FirstHeading from "../../molecule/FirstHeading";
+import { Footer } from "../../molecule/Footer";
+import Introduction from "../../molecule/Introduction";
+import JobAndPlacement from "../../molecule/Jobandplacement";
+import Leaves from "../../molecule/Leaves";
+import SalaryAndBenefit from "../../molecule/Salaryandbenefit";
 export function TopPart() {
-  const initialValues: any = { firstName: "e.g:- Puzan", mothername: "xyz" };
+  const initialValues: any = { firstName: "e.g:- Jhonny", mothername: "xyz" };
 
   const {
     handleSubmit,
